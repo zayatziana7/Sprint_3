@@ -1,7 +1,6 @@
-from conftest import *
-
-from utils import *
-
+from conftest import base_url
+from pages.locators import AuthorizationForm, wait_url
+from utils import fake_login, fake_email, fake_password, incorrect_password
 
 
 class TestRegistration:

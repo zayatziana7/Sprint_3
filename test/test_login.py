@@ -1,6 +1,6 @@
-from conftest import *
-from utils import *
-
+from conftest import base_url
+from pages.locators import AuthorizationForm, MainPage, wait_el, AppHeader
+from utils import email, password
 
 
 class TestLogin:

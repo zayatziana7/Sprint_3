@@ -1,5 +1,6 @@
-from conftest import *
-from utils import *
+from conftest import base_url
+from pages.locators import AppHeader, AuthorizationForm, wait_el, MainPage, ProfilePage
+from utils import email, password
 
 
 class TestLogaot:

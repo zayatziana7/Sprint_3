@@ -1,4 +1,5 @@
-from conftest import *
+from conftest import base_url
+from pages.locators import AppHeader, MainPage
 
 
 class TestConstructor:

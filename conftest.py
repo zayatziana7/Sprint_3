@@ -8,6 +8,7 @@ from utils import *
 
 
 
+
 base_url = 'https://stellarburgers.nomoreparties.site/'
 
 @pytest.fixture()

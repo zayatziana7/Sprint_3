@@ -2,6 +2,7 @@ from faker import Faker
 import random
 
 
+
 fake = Faker("en_US")
 
 # generation login, email, password
