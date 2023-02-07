@@ -3,6 +3,7 @@ from pages.locators import AuthorizationForm, wait_url
 from utils import fake_login, fake_email, fake_password, incorrect_password
 
 
+
 class TestRegistration:
     def test_register_new_user_true(self, driver):
         driver.get(base_url + 'register')

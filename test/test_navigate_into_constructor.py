@@ -2,6 +2,7 @@ from conftest import base_url
 from pages.locators import AppHeader, MainPage
 
 
+
 class TestConstructor:
     def test_click_link_constructor_true(self, driver):
         driver.get(base_url + 'login')
