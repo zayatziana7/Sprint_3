@@ -3,7 +3,6 @@ from pages.locators import AuthorizationForm, MainPage, wait_el, AppHeader
 from utils import email, password
 
 
-
 class TestLogin:
     def test_authorization_main_page_true(self, driver):
         driver.get(base_url)
@@ -14,7 +13,6 @@ class TestLogin:
         wait_el(driver, MainPage.title_main_page)
         checkout_button = driver.find_element(*MainPage.button_checkout).text
         assert checkout_button == 'Оформить заказ'
-
 
     def test_authorization_personal_account_true(self, driver):
         driver.get(base_url)

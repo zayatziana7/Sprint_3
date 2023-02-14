@@ -3,7 +3,6 @@ from pages.locators import AppHeader, AuthorizationForm, wait_el, MainPage
 from utils import email, password
 
 
-
 class TestNavigateToPersonalAccount:
     def test_navigate_to_pesronal_account_true(self, driver):
         driver.get(base_url)
@@ -16,4 +15,3 @@ class TestNavigateToPersonalAccount:
         driver.find_element(*AppHeader.link_acc).click()
         current_url = driver.current_url
         assert current_url == base_url + 'account'
-

@@ -1,4 +1,9 @@
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+
 from conftest import *
+
 
 class AuthorizationForm:
     # форма для ввода логина
@@ -8,7 +13,7 @@ class AuthorizationForm:
     email = (By.XPATH, '//label[text()="Email"]/following-sibling::input')
 
     # Поле для ввода пароля
-    password = (By.XPATH, './/input[@name="Пароль"]') # форма для ввода пароля
+    password = (By.XPATH, './/input[@name="Пароль"]')  # форма для ввода пароля
 
     # Уведомление о вводе неправильного пароля
     password_fail = (By.XPATH, '//p[contains(text(),"Некорректный пароль")]')
@@ -29,13 +34,12 @@ class AuthorizationForm:
     title_login_page = (By.XPATH, "//h2[contains(text(),'Вход')]")
 
 
-
 class AppHeader:
     # Cсылка для входа в личный кабинет
     link_acc = (By.XPATH, "//p[contains(text(),'Личный Кабинет')]")
 
     # Ссылка для входа в раздел конструктор
-    link_constructor =(By.XPATH, "//p[contains(text(),'Конструктор')]")
+    link_constructor = (By.XPATH, "//p[contains(text(),'Конструктор')]")
 
     # Ссылка на логотип
     logo = (By.CLASS_NAME, 'AppHeader_header__logo__2D0X2')
@@ -63,17 +67,17 @@ class MainPage:
     # Секция Начинки
     filling_element = (By.XPATH, "//span[text() = 'Начинки']")
 
+
 class ProfilePage:
     # Кнопка выхода из Личного кабинета
     button_exit = (By.XPATH, "//button[contains(text(),'Выход')]")
+
 
 def wait_el(driver_to_use, locator):
     WebDriverWait(driver_to_use, 3).until(
         expected_conditions.visibility_of_element_located(locator))
 
+
 def wait_url(driver_to_use, locator):
-    WebDriverWait(driver_to_use, 3).until\
+    WebDriverWait(driver_to_use, 3).until \
         (expected_conditions.url_to_be(locator))
-
-
-

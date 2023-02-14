@@ -3,7 +3,6 @@ from pages.locators import AppHeader, AuthorizationForm, wait_el, MainPage, Prof
 from utils import email, password
 
 
-
 class TestLogaot:
     def test_click_link_constructor_true(self, driver):
         driver.get(base_url)
@@ -20,4 +19,3 @@ class TestLogaot:
         current_url = driver.current_url
 
         assert current_url == base_url + 'login'
-
